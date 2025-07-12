@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{ asset('icons/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" type="image/x-icon">
     <title>HRM</title>
 
     <!-- Fonts -->
@@ -26,7 +26,7 @@
             <nav class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="{{ asset('icons/logo.png') }}" class="h-10 w-10 mr-2">
+                    <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" class="h-10 w-10 mr-2">
                     <span class="text-xl font-bold text-gray-800">HRM</span>
                 </div>
                 <!-- Auth Links -->

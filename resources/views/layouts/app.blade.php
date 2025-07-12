@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('icons/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" type="image/x-icon">
      {{-- DYNAMIC TITLE --}}
     <title>
         @if (request()->routeIs('dashboard'))

@@ -3,7 +3,10 @@
     "builds": [
         {
             "src": "public/index.php",
-            "use": "@juicyfx/vercel-php"
+            "use": "vercel-php@0.6.0",
+            "config": {
+                "phpVersion": "8.2"
+            }
         },
         {
             "src": "public/**",
@@ -12,7 +15,7 @@
     ],
     "routes": [
         {
-            "src": "/(css|js|images|fonts|icons)/(.*)",
+            "src": "/(css|js|images|fonts|icons|storage)/(.*)",
             "dest": "public/$1/$2"
         },
         {

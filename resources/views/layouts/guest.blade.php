@@ -32,7 +32,7 @@
                     <div class="flex items-center justify-center">
                         {{-- FINAL BALANCED SOLUTION --}}
                         {{-- This uses a custom size of 26px for the image --}}
-                        <img src="{{ asset('icons/logo.png') }}" class="h-12 w-12 mr-2">
+                        <img  src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" class="h-12 w-12 mr-2">
                         <span class="text-5xl font-bold text-gray-700">HRM</span>
                     </div>
                 </a>

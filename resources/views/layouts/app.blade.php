@@ -44,7 +44,7 @@
         <aside id="sidebar" class="bg-white text-gray-800 w-64 flex-shrink-0 transition-all duration-300 ease-in-out z-40">
             <div class="flex items-center justify-center px-6 py-4">
                 <div class="flex items-center">
-                    <img src="{{ asset('icons/logo.png') }}" class="h-8 w-8 mr-2">
+                    <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" class="h-8 w-8 mr-2">
                     <span class="text-2xl font-bold text-gray-800">HRM</span>
                 </div>
             </div>

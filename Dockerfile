@@ -27,14 +27,12 @@ COPY . .
 # Install composer dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Set permissions for storage and bootstrap/cache
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
-
-# Configure Apache
-RUN a2enmod rewrite
+# Copy the Apache config and the startup script
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY start.sh /usr/local/bin/start.sh
 
-# Expose port 80 and start apache
-EXPOSE 80
-CMD ["apache2-foreground"]
+# Make the startup script executable
+RUN chmod +x /usr/local/bin/start.sh
+
+# Set the entrypoint to our startup script
+ENTRYPOINT ["/usr/local/bin/start.sh"]

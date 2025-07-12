@@ -19,8 +19,16 @@ WORKDIR /var/www/html
 COPY . .
 RUN composer install --no-dev --optimize-autoloader
 COPY --from=builder /app/public/build ./public/build
+
+# Copy the corrected Apache config and startup script
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY start.sh /usr/local/bin/start.sh
+
+# Enable the Apache rewrite module (CRITICAL FOR .htaccess)
 RUN a2enmod rewrite
+
+# Make the startup script executable
 RUN chmod +x /usr/local/bin/start.sh
+
+# Set the entrypoint to our startup script
 ENTRYPOINT ["/usr/local/bin/start.sh"]

@@ -10,11 +10,15 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware) {
+   ->withMiddleware(function (Middleware $middleware) {
+    // Call trustProxies on its own line
+    $middleware->trustProxies(at: '*');
+
+    // The alias for the 'role' middleware stays inside the alias method
     $middleware->alias([
         'role' => \App\Http\Middleware\CheckUserRole::class,
     ]);
-    })
+})
 
     ->withExceptions(function (Exceptions $exceptions): void {
         //

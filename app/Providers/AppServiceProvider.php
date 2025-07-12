@@ -9,11 +9,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
-    public function register(): void
+   public function register(): void
     {
-        // Add this line
-        $this->app->bind('path.public', function() {
-            return base_path('public');
+        // Add these lines
+        $this->app->bind('path.public', function($app) {
+            return $app->basePath('../public');
         });
     }
 

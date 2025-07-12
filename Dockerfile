@@ -27,27 +27,12 @@ COPY . .
 # Install composer dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# === THE NEW, CRUCIAL FIX IS HERE ===
-# Create the .htaccess file directly inside the container
-RUN echo '<IfModule mod_rewrite.c>\n\
-    <IfModule mod_negotiation.c>\n\
-        Options -MultiViews -Indexes\n\
-    </IfModule>\n\
-    RewriteEngine On\n\
-    RewriteCond %{HTTP:Authorization} .\n\
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]\n\
-    RewriteCond %{REQUEST_FILENAME} !-d\n\
-    RewriteCond %{REQUEST_URI} (.+)/$\n\
-    RewriteRule ^ %1 [L,R=301]\n\
-    RewriteCond %{REQUEST_FILENAME} !-d\n\
-    RewriteCond %{REQUEST_FILENAME} !-f\n\
-    RewriteRule ^ index.php [L]\n\
-</IfModule>' > public/.htaccess
-# === END OF THE FIX ===
-
 # Copy the Apache config and the startup script
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY start.sh /usr/local/bin/start.sh
+
+# Enable the Apache rewrite module
+RUN a2enmod rewrite
 
 # Make the startup script executable
 RUN chmod +x /usr/local/bin/start.sh

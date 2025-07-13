@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" type="image/x-icon">
+    <link rel="icon" href="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//logo.png" type="image/x-icon">
      {{-- DYNAMIC TITLE --}}
     <title>
         @if (request()->routeIs('dashboard'))
@@ -44,7 +44,7 @@
         <aside id="sidebar" class="bg-white text-gray-800 w-64 flex-shrink-0 transition-all duration-300 ease-in-out z-40">
             <div class="flex items-center justify-center px-6 py-4">
                 <div class="flex items-center">
-                    <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/logo.png" class="h-8 w-8 mr-2">
+                    <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//logo.png" class="h-8 w-8 mr-2">
                     <span class="text-2xl font-bold text-gray-800">HRM</span>
                 </div>
             </div>

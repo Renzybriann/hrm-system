@@ -16,7 +16,7 @@
             <div class="w-full px-6 sm:w-1/2 xl:w-1/3 mb-6">
                 <div class="flex items-center px-5 py-6 bg-white rounded-lg shadow-md">
                     <div class="h-16 w-16 rounded-full bg-opacity-75 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/briefcase.png" alt="Briefcase Icon" class="h-16 w-16">
+                        <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//briefcase.png" alt="Briefcase Icon" class="h-16 w-16">
                     </div>
                     <div class="mx-5">
                         <h4 class="text-2xl font-bold text-gray-700">{{ $totalJobs }}</h4>
@@ -28,7 +28,7 @@
             <div class="w-full px-6 sm:w-1/2 xl:w-1/3 mb-6">
                 <div class="flex items-center px-5 py-6 bg-white rounded-lg shadow-md">
                     <div class="h-16 w-16 rounded-full bg-opacity-75 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/inbox.png" alt="Briefcase Icon" class="h-16 w-16">
+                        <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//inbox.png" alt="Briefcase Icon" class="h-16 w-16">
                     </div>
                     <div class="mx-5">
                         <h4 class="text-2xl font-bold text-gray-700">{{ $totalApplications }}</h4>
@@ -40,7 +40,7 @@
             <div class="w-full px-6 sm:w-1/2 xl:w-1/3 mb-6">
                 <div class="flex items-center px-5 py-6 bg-white rounded-lg shadow-md">
                     <div class="h-16 w-16 rounded-full bg-opacity-75 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/ruser.png" alt="Briefcase Icon" class="h-14 w-14">
+                        <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//ruser.png" alt="Briefcase Icon" class="h-14 w-14">
                     </div>
                     <div class="mx-5">
                         <h4 class="text-2xl font-bold text-gray-700">{{ $totalUsers }}</h4>
@@ -85,10 +85,10 @@
                     <div class="h-16 w-16 rounded-full {{ Auth::user()->hasVerifiedEmail() ? 'bg' : 'bg' }} bg-opacity-75 flex items-center justify-center">
                         @if (Auth::user()->hasVerifiedEmail())
                             {{-- Show the 'verified' icon --}}
-                            <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/verified.png" alt="Verified Icon" class="h-16 w-16">
+                            <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//verified.png" alt="Verified Icon" class="h-16 w-16">
                         @else
                             {{-- Show the 'not-verified' icon --}}
-                            <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/not-verified.png" alt="Not Verified Icon" class="h-10 w-10">
+                            <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//not-verified.png" alt="Not Verified Icon" class="h-10 w-10">
                         @endif
                     </div>
 
@@ -105,7 +105,7 @@
             <div class="w-full px-6 sm:w-1/2 xl:w-1/3 mb-6">
                 <div class="flex items-center px-5 py-6 bg-white rounded-lg shadow-md">
                     <div class="h-16 w-16 rounded-full bg-opacity-75 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/position.png" alt="Briefcase Icon" class="h-16 w-16">
+                        <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//position.png" alt="Briefcase Icon" class="h-16 w-16">
                     </div>
                     <div class="mx-5">
                         <h4 class="text-2xl font-bold text-gray-700">{{ $appliedCount }}</h4>
@@ -118,7 +118,7 @@
             <div class="w-full px-6 sm:w-1/2 xl:w-1/3 mb-6">
                 <div class="flex items-center px-5 py-6 bg-white rounded-lg shadow-md">
                     <div class="h-16 w-16 rounded-full bg-opacity-75 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Renzybriann/hrm-assets/main/job.png" alt="Briefcase Icon" class="h-16 w-16">
+                        <img src="https://osbozdkotesdrlrwuxwa.supabase.co/storage/v1/object/public/icons//job.png" alt="Briefcase Icon" class="h-16 w-16">
                     </div>
                     <div class="mx-5">
                         <h4 class="text-2xl font-bold text-gray-700">{{ $totalJobsAvailable }}</h4>
